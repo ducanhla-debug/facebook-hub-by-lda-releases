@@ -1,6 +1,6 @@
 # Hướng dẫn cài và mở Facebook Hub by LDA trên Windows
 
-Phiên bản: 1.0.0-beta.1 · File cài: `Facebook-Hub-by-LDA-Setup-x64.exe` (Windows 10/11, 64-bit)
+Phiên bản: 1.0.0-beta.2 · File cài: `Facebook-Hub-by-LDA-Setup-x64.exe` (Windows 10/11, 64-bit)
 
 Máy **không cần** cài Node.js, npm, Chrome riêng, MuMu, ADB hay công cụ lập trình.
 
@@ -59,6 +59,8 @@ Lưu ý quan trọng:
 ## 5. Cập nhật
 
 Không có cập nhật tự động. Khi có bản mới, tải bộ cài mới và cài vào **cùng thư mục gốc**: chỉ thư mục `App` được thay, dữ liệu được giữ nguyên.
+
+> **Quan trọng:** không dùng bộ cài **1.0.0-beta.1** để cài lại hoặc cài đè — bộ cài đó có lỗi có thể xóa cả thư mục dữ liệu. Hãy dùng bộ cài 1.0.0-beta.2 trở lên. Nên sao lưu (Cài đặt → Sao lưu) trước khi cập nhật.
 
 ## 6. Gỡ cài đặt
 

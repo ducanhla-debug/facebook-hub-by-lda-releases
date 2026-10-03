@@ -1,6 +1,6 @@
 # Hướng dẫn cài và mở Facebook Hub by LDA trên macOS
 
-Phiên bản: 1.0.0-beta.1 · File: `Facebook-Hub-by-LDA-1.0.0-beta.1-arm64.dmg`
+Phiên bản: 1.0.0-beta.2 · File: `Facebook-Hub-by-LDA-1.0.0-beta.2-arm64.dmg`
 
 Dành cho **Mac chip Apple (M1/M2/M3/M4…)**, macOS 12 trở lên. Bản này **không** dành cho Mac chip Intel (chưa phát hành bản Intel vì chưa kiểm thử phù hợp).
 
@@ -11,7 +11,7 @@ Máy **không cần** cài Node.js, npm hay công cụ lập trình.
 Mở Terminal tại thư mục Downloads:
 
 ```bash
-shasum -a 256 Facebook-Hub-by-LDA-1.0.0-beta.1-arm64.dmg
+shasum -a 256 Facebook-Hub-by-LDA-1.0.0-beta.2-arm64.dmg
 ```
 
 So sánh với dòng tương ứng trong `SHA256SUMS.txt`. Khác nhau thì không mở và tải lại.
