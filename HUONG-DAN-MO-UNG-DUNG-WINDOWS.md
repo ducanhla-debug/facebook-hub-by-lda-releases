@@ -1,6 +1,6 @@
 # Hướng dẫn cài và mở Facebook Hub by LDA trên Windows
 
-Phiên bản: 1.0.0-beta.2 · File cài: `Facebook-Hub-by-LDA-Setup-x64.exe` (Windows 10/11, 64-bit)
+Phiên bản: 1.0.0-beta.3 · File cài: `Facebook-Hub-by-LDA-Setup-x64.exe` (Windows 10/11, 64-bit)
 
 Máy **không cần** cài Node.js, npm, Chrome riêng, MuMu, ADB hay công cụ lập trình.
 
@@ -56,12 +56,26 @@ Lưu ý quan trọng:
 - Đóng cửa sổ chỉ thu nhỏ xuống khay hệ thống (góc phải thanh tác vụ); lịch vẫn chạy. Muốn dừng hẳn: chuột phải biểu tượng khay → **Thoát hoàn toàn**.
 - Khi còn lịch đã duyệt, ứng dụng ngăn máy **tự** ngủ nhưng vẫn cho màn hình tắt. Ứng dụng không chống được việc bạn chủ động Sleep/Shut down, gập nắp hoặc hết pin — khi đó bài sẽ chuyển sang "Đã lỡ lịch" và **không tự đăng bù**.
 
-## 5. Cập nhật
+## 5. Kết nối Google Sheets (tùy chọn, làm một lần)
+
+Dùng khi bạn muốn soạn lịch đăng trên Google Sheet rồi nhập vào ứng dụng. Cần một file "OAuth Client" của riêng bạn:
+
+1. Mở https://console.cloud.google.com, đăng nhập Gmail của bạn. Chọn **Select a project → New project**, đặt tên (vd. `Facebook Hub`) → **Create**.
+2. Vào **APIs & Services → Library**, tìm **Google Sheets API** → **Enable**. Làm tương tự với **Google Drive API**.
+3. Vào **Google Auth Platform → Branding** (lần đầu có nút **Get started**): App name `Facebook Hub`, chọn email hỗ trợ → **Next**; Audience chọn **External** → **Next**; nhập email liên hệ → **Next**; tích đồng ý → **Create**.
+4. Vào **Audience → Test users → Add users**, thêm đúng Gmail bạn sẽ dùng để kết nối → **Save**. (Để ứng dụng ở chế độ **Testing**; không cần gửi Google xét duyệt.)
+5. Vào **Clients → Create client**: Application type chọn **Desktop app**, đặt tên → **Create** → **Download JSON**.
+6. Trong Facebook Hub: **Cài đặt → Google Sheets → Nhập file OAuth Client (JSON)**, chọn file vừa tải → bấm **Kết nối Google** và đăng nhập trong trình duyệt. Nếu Google báo "Google hasn't verified this app", bấm **Continue** (đây là app của chính bạn).
+7. Bấm **Tạo Google Sheet mẫu**, điền Sheet, rồi bấm **Nhập từ Google Sheets** → **Xem & duyệt hàng loạt**.
+
+Lưu ý: ứng dụng chỉ có quyền `drive.file` — chỉ mở được Sheet do chính ứng dụng tạo, không đọc được các file khác trong Drive. Ở chế độ Testing, Google có thể yêu cầu đăng nhập lại sau khoảng 7 ngày. Không chia sẻ file JSON cho người khác.
+
+## 6. Cập nhật
 
 Không có cập nhật tự động. Khi có bản mới, tải bộ cài mới và cài vào **cùng thư mục gốc**: chỉ thư mục `App` được thay, dữ liệu được giữ nguyên.
 
-> **Quan trọng:** không dùng bộ cài **1.0.0-beta.1** để cài lại hoặc cài đè — bộ cài đó có lỗi có thể xóa cả thư mục dữ liệu. Hãy dùng bộ cài 1.0.0-beta.2 trở lên. Nên sao lưu (Cài đặt → Sao lưu) trước khi cập nhật.
+> **Quan trọng:** không dùng bộ cài **1.0.0-beta.1** để cài lại hoặc cài đè — bộ cài đó có lỗi có thể xóa cả thư mục dữ liệu. Hãy dùng bộ cài 1.0.0-beta.3 trở lên. Nên sao lưu (Cài đặt → Sao lưu) trước khi cập nhật.
 
-## 6. Gỡ cài đặt
+## 7. Gỡ cài đặt
 
 *Settings → Apps → Facebook Hub by LDA → Uninstall*. Mặc định trình gỡ **giữ lại** dữ liệu (Data, Sessions, Media, Logs, Backups). Trình gỡ sẽ hỏi riêng (hai lần xác nhận, mặc định "No") nếu bạn muốn xóa luôn dữ liệu.
